@@ -506,3 +506,129 @@ body {
 .hidden {
     display: none !important;
 }
+
+/* Funky Empathy Section */
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.z-10 {
+    position: relative;
+    z-index: 10;
+}
+
+.funky-shape {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(60px);
+    opacity: 0.6;
+    z-index: 0;
+    animation: floatShape 10s ease-in-out infinite alternate;
+}
+
+.shape-blob-1 {
+    width: 400px;
+    height: 400px;
+    background: #ffd6cc;
+    top: -100px;
+    right: -50px;
+}
+
+.shape-blob-2 {
+    width: 350px;
+    height: 350px;
+    background: #d4e6db;
+    bottom: -50px;
+    left: -100px;
+    animation-delay: -5s;
+}
+
+@keyframes floatShape {
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    100% {
+        transform: translate(30px, 50px) scale(1.1);
+    }
+}
+
+.funky-quote-container {
+    position: relative;
+    margin: 2rem 0;
+}
+
+.funky-quote-card {
+    background: var(--color-white);
+    padding: 3rem;
+    border-radius: 2rem;
+    border: 4px solid var(--color-accent);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+    transform: rotate(2deg);
+    position: relative;
+    z-index: 2;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.funky-quote-card:hover {
+    transform: rotate(0deg) scale(1.02);
+}
+
+.funky-quote-shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--color-soft-green);
+    border-radius: 2rem;
+    transform: rotate(-3deg) translate(1rem, 1rem);
+    z-index: 1;
+}
+
+.emoji-decoration {
+    position: absolute;
+    font-size: 3rem;
+    animation: pulse 2s infinite alternate;
+}
+
+.emoji-decoration.top-left {
+    top: -1.5rem;
+    left: -1.5rem;
+}
+
+.emoji-decoration.bottom-right {
+    bottom: -1.5rem;
+    right: -1.5rem;
+    animation-delay: -1s;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+.funky-title {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--color-accent);
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+    .funky-title {
+        font-size: 2.5rem;
+    }
+}
+
+.funky-subtitle {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--color-forest);
+}
