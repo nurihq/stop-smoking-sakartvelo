@@ -1,25 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ka">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stop Smoking Sakartvelo | Fulfill Your Purpose</title>
+    <title data-en="Stop Smoking Sakartvelo | Find Your Path"
+        data-ka="თავი დაანებეთ მოწევას საქართველოში | იპოვეთ თქვენი გზა">Stop Smoking Sakartvelo</title>
     <meta name="description"
-        content="An appeal to the youth of Sakartvelo. Stop smoking, find a passion, connect with a community, and fulfill your purpose. If you need support, please reach out.">
-
-    <!-- Open Graph for social sharing -->
-    <meta property="og:title" content="Stop Smoking Sakartvelo">
-    <meta property="og:description"
-        content="Why are our youth damaging themselves? Find a passion, connect, and fulfill your purpose.">
-    <meta property="og:type" content="website">
+        content="A positive space for youth in Sakartvelo to find purpose, connect, and stop smoking.">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+Georgian:wght@400;500;600;700&display=swap"
         rel="stylesheet">
 
+    <link rel="icon" type="image/png" href="favicon.png">
     <link rel="stylesheet" href="styles.css">
 
     <!-- Google tag (gtag.js) -->
@@ -34,91 +30,194 @@
 </head>
 
 <body>
-    <!-- Background elements -->
-    <div class="glow glow-1"></div>
-    <div class="glow glow-2"></div>
-    <div class="noise-overlay"></div>
+    <button id="lang-toggle" class="lang-btn" aria-label="Toggle Language">EN</button>
 
     <main>
-        <section class="hero min-h-screen flex-center flex-col text-center px-4 relative">
-            <h1 class="fade-in tracking-tight">Can we please stop smoking in <span
-                    class="text-gradient">Sakartvelo</span>?</h1>
-            <div class="scroll-indicator fade-in delay-2">
-                <span>Scroll</span>
+        <!-- Welcome / Hero -->
+        <section class="section hero bg-soft-green min-h-screen flex-center px-4 relative">
+            <div class="content max-w-3xl text-center fade-in slide-up">
+                <div class="seedling-icon mb-6">🌱</div>
+                <h1 class="text-4xl md:text-6xl font-bold text-forest mb-6 tracking-tight leading-tight"
+                    data-en="Let’s grow something beautiful. Together." data-ka="მოდით შევქმნათ რაიმე ლამაზი. ერთად.">
+                    მოდით შევქმნათ რაიმე ლამაზი. ერთად.
+                </h1>
+                <p class="text-xl text-sage mb-10"
+                    data-en="Our youth has so much potential. Let's stop smoking in Sakartvelo and start living fully."
+                    data-ka="ჩვენს ახალგაზრდებს უდიდესი პოტენციალი აქვთ. მოდით, თავი დავანებოთ მოწევას საქართველოში და დავიწყოთ სრულფასოვანი ცხოვრება.">
+                    ჩვენს ახალგაზრდებს უდიდესი პოტენციალი აქვთ. მოდით, თავი დავანებოთ მოწევას საქართველოში და დავიწყოთ
+                    სრულფასოვანი ცხოვრება.
+                </p>
+                <div class="flex-center gap-4 flex-col sm:flex-row">
+                    <button class="btn btn-primary"
+                        onclick="scrollToSection('journey'); gtag('event', 'click_start_journey', {'event_category': 'engagement'});"
+                        data-en="Start the Journey" data-ka="დაიწყე მოგზაურობა">
+                        დაიწყე მოგზაურობა
+                    </button>
+                    <button class="btn btn-outline"
+                        onclick="scrollToSection('contact'); gtag('event', 'click_hero_support', {'event_category': 'engagement'});"
+                        data-en="I Need Support" data-ka="მჭირდება მხარდაჭერა">
+                        მჭირდება მხარდაჭერა
+                    </button>
+                </div>
+            </div>
+
+            <div class="scroll-indicator fade-in delay-2 hidden-mobile">
+                <span data-en="Scroll down" data-ka="ჩამოსქროლეთ">ჩამოსქროლეთ</span>
                 <div class="line"></div>
             </div>
         </section>
 
-        <section class="story-block min-h-screen flex-center px-4">
-            <div class="content text-center max-w-3xl fade-in slide-up">
-                <p class="quote">Why are our youth damaging themselves like this?</p>
-                <p class="mt-8 text-neutral-300">The thing that hurts the most is seeing young women smoking.</p>
+        <!-- Empathy Section -->
+        <section id="journey" class="section min-h-screen flex-center px-4 bg-white relative">
+            <div class="content max-w-4xl grid-2 gap-12 items-center fade-in">
+                <div
+                    class="image-placeholder slide-up bg-warm-sand rounded-2xl p-8 flex-center text-center h-full min-h-[300px]">
+                    <p class="text-3xl text-forest font-medium italic"
+                        data-en='"It took me 13 years to quit. It wasn’t easy."'
+                        data-ka='"13 წელი დამჭირდა, რომ თავი დამენებებინა. ეს არ იყო ადვილი."'>
+                        "13 წელი დამჭირდა, რომ თავი დამენებებინა. ეს არ იყო ადვილი."
+                    </p>
+                </div>
+                <div class="text-left slide-up delay-1">
+                    <h2 class="text-3xl font-bold text-forest mb-6" data-en="I understand how hard it is."
+                        data-ka="კარგად მესმის, რამდენად რთულია.">კარგად მესმის, რამდენად რთულია.</h2>
+                    <p class="text-lg text-sage mb-6"
+                        data-en="I smoked for over a decade. I know the dependency, the habit, the comfort it seems to provide. I sympathize completely."
+                        data-ka="მე ათ წელზე მეტი ვეწეოდი. ვიცი ეს დამოკიდებულება, ჩვევა, ეგრეთ წოდებული კომფორტი, რომელსაც ის თითქოს გვთავაზობს. სრულიად თანაგიგრძნობთ.">
+                        მე ათ წელზე მეტი ვეწეოდი. ვიცი ეს დამოკიდებულება, ჩვევა, ეგრეთ წოდებული კომფორტი, რომელსაც ის
+                        თითქოს გვთავაზობს. სრულიად თანაგიგრძნობთ.
+                    </p>
+                    <p class="text-lg text-sage mb-8"
+                        data-en="But looking back, I realize how much life and health I traded away. It breaks my heart to see our young people."
+                        data-ka="მაგრამ უკან რომ ვიხედები, ვხვდები, რამდენი წელი და ჯანმრთელობა დავკარგე. გული მიკვდება, როცა ვხედავ, თუ როგორ იზიანებენ თავს ჩვენი ახალგაზრდები.">
+                        მაგრამ უკან რომ ვიხედები, ვხვდები, რამდენი წელი და ჯანმრთელობა დავკარგე. გული მიკვდება, როცა
+                        ვხედავ, თუ როგორ იზიანებენ თავს ჩვენი ახალგაზრდები.
+                    </p>
+
+                    <div
+                        class="standout-quote bg-white shadow-lg p-8 rounded-2xl border-t-4 border-accent mb-8 transform -rotate-1 relative z-10">
+                        <p class="text-2xl font-bold text-forest leading-tight mb-2"
+                            data-en="The thing that hurts the most is seeing young women smoking."
+                            data-ka="ყველაზე მეტად გული მტკივა, როცა ვხედავ, როგორ ეწევიან ახალგაზრდა ქალები.">
+                            ყველაზე მეტად გული მტკივა, როცა ვხედავ, როგორ ეწევიან ახალგაზრდა ქალები.
+                        </p>
+                        <p class="text-sage" data-en="We have so much to offer. Let's not damage ourselves."
+                            data-ka="ჩვენ იმდენი რამის შეთავაზება შეგვიძლია. მოდით, ნუ დავიზიანებთ თავს.">
+                            ჩვენ იმდენი რამის შეთავაზება შეგვიძლია. მოდით, ნუ დავიზიანებთ თავს.
+                        </p>
+                    </div>
+
+                    <div class="quote-box p-6 bg-soft-green rounded-xl border-l-4 border-forest">
+                        <p class="text-forest font-semibold"
+                            data-en="You are unique. The world needs you to fulfill your true potential."
+                            data-ka="შენ უნიკალური ხარ. სამყაროს სჭირდება, რომ შენი ნამდვილი პოტენციალი გამოავლინო.">შენ
+                            უნიკალური ხარ. სამყაროს სჭირდება, რომ შენი ნამდვილი პოტენციალი გამოავლინო.</p>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section class="story-block min-h-screen flex-center px-4 bg-darker">
-            <div class="content max-w-4xl grid-2 gap-12 fade-in">
-                <div class="text-left slide-up">
-                    <p class="quote small mb-6">"I smoked for 13 years and quit 2 years ago."</p>
-                    <p class="text-neutral-300">It was not easy, so I sympathise.</p>
+        <!-- Actionable Path -->
+        <section class="section py-24 px-4 bg-warm-sand">
+            <div class="max-w-4xl mx-auto text-center mb-16 fade-in slide-up">
+                <h2 class="text-4xl font-bold text-forest mb-4" data-en="Find Your Path Forward"
+                    data-ka="იპოვე შენი გზა">იპოვე შენი გზა</h2>
+                <p class="text-xl text-sage" data-en="Replace the habit with something that builds you up."
+                    data-ka="ჩაანაცვლე მავნე ჩვევა იმით, რაც გაგაძლიერებს.">ჩაანაცვლე მავნე ჩვევა იმით, რაც
+                    გაგაძლიერებს.</p>
+            </div>
+
+            <div class="max-w-5xl mx-auto grid-3 gap-8">
+                <!-- Card 1 -->
+                <div class="path-card bg-white p-8 rounded-2xl shadow-sm fade-in slide-up delay-1">
+                    <div class="icon-wrap bg-soft-green text-forest text-2xl mb-6">💡</div>
+                    <h3 class="text-xl font-bold text-forest mb-3" data-en="Find a Passion" data-ka="იპოვე გატაცება">
+                        იპოვე გატაცება</h3>
+                    <p class="text-sage mb-6 flex-grow"
+                        data-en="What are your dreams? Direct that energy into doing what you genuinely love. Create, learn, and grow."
+                        data-ka="რა არის შენი ოცნებები? მიმართე ენერგია იმისკენ, რაც ნამდვილად გიყვარს. შექმენი, ისწავლე და გაიზარდე.">
+                        რა არის შენი ოცნებები? მიმართე ენერგია იმისკენ, რაც ნამდვილად გიყვარს. შექმენი, ისწავლე და
+                        გაიზარდე.</p>
                 </div>
-                <div class="text-left slide-up delay-1 border-l pl-8 border-neutral-800">
-                    <p class="text-xl text-neutral-200">But I am angry every day at how I wasted my life doing it.</p>
-                    <p class="mt-4 text-gradient font-semibold text-2xl">Please stop.</p>
-                    <p class="mt-2 text-neutral-400">Stop drinking and smoking.</p>
+
+                <!-- Card 2 -->
+                <div class="path-card bg-white p-8 rounded-2xl shadow-sm fade-in slide-up delay-2">
+                    <div class="icon-wrap bg-soft-green text-forest text-2xl mb-6">🥊</div>
+                    <h3 class="text-xl font-bold text-forest mb-3" data-en="Get to a Gym" data-ka="ივარჯიშე">ივარჯიშე
+                    </h3>
+                    <p class="text-sage mb-6 flex-grow"
+                        data-en="Join a fighting gym or fitness club. Build discipline, release stress, and rediscover your physical strength."
+                        data-ka="დაიწყე ვარჯიში. გამოიმუშავე დისციპლინა, გათავისუფლდი სტრესისგან და ხელახლა აღმოაჩინე შენი ფიზიკური ძალა.">
+                        დაიწყე ვარჯიში. გამოიმუშავე დისციპლინა, გათავისუფლდი სტრესისგან და ხელახლა აღმოაჩინე შენი
+                        ფიზიკური ძალა.</p>
                 </div>
+
+                <!-- Card 3 -->
+                <div class="path-card bg-white p-8 rounded-2xl shadow-sm fade-in slide-up delay-3">
+                    <div class="icon-wrap bg-soft-green text-forest text-2xl mb-6">🤝</div>
+                    <h3 class="text-xl font-bold text-forest mb-3" data-en="Connect with Community"
+                        data-ka="დაუკავშირდი საზოგადოებას">დაუკავშირდი საზოგადოებას</h3>
+                    <p class="text-sage mb-6 flex-grow"
+                        data-en="You are not alone. Surround yourself with supportive people who encourage healthy, vibrant living."
+                        data-ka="შენ არ ხარ მარტო. გარშემორტყმული იყავი მხარდამჭერი ადამიანებით, რომლებიც ხელს უწყობენ ჯანსაღ ცხოვრებას.">
+                        შენ არ ხარ მარტო. გარშემორტყმული იყავი მხარდამჭერი ადამიანებით, რომლებიც ხელს უწყობენ ჯანსაღ
+                        ცხოვრებას.</p>
+                </div>
+            </div>
+
+            <div class="text-center mt-16 fade-in slide-up delay-3">
+                <button class="btn btn-primary shadow-lg"
+                    onclick="scrollToSection('contact'); gtag('event', 'click_join_community', {'event_category': 'conversion'});"
+                    data-en="Help me find a community" data-ka="დამეხმარეთ ვიპოვო საზოგადოება">
+                    დამეხმარეთ ვიპოვო საზოგადოება
+                </button>
             </div>
         </section>
 
-        <section class="story-block min-h-screen flex-center px-4 relative">
-            <div class="glow glow-3"></div>
-            <div class="content text-center max-w-4xl fade-in slide-up">
-                <p class="text-3xl font-semibold mb-12">You are unique.<br>The world needs you to fulfil your purpose.
+        <!-- Reach Out Form -->
+        <section id="contact" class="section py-24 px-4 bg-forest text-white">
+            <div class="max-w-xl mx-auto text-center fade-in slide-up">
+                <div class="mb-4 text-3xl">💌</div>
+                <h2 class="text-3xl md:text-4xl font-bold mb-4" data-en="We are here to listen"
+                    data-ka="ჩვენ მზად ვართ მოგისმინოთ">ჩვენ მზად ვართ მოგისმინოთ</h2>
+                <p class="text-soft-green-light mb-10 text-lg"
+                    data-en="If you're ready to stop, or just need someone to talk to, please reach out. We can help connect you with resources, gyms, or support groups."
+                    data-ka="თუ მზად ხართ თავი დაანებოთ, ან უბრალოდ ვინმესთან საუბარი გჭირდებათ, მოგვწერეთ. ჩვენ შეგვიძლია დაგეხმაროთ რესურსების, დარბაზების ან მხარდამჭერი ჯგუფების პოვნაში.">
+                    თუ მზად ხართ თავი დაანებოთ, ან უბრალოდ ვინმესთან საუბარი გჭირდებათ, მოგვწერეთ. ჩვენ შეგვიძლია
+                    დაგეხმაროთ რესურსების, დარბაზების ან მხარდამჭერი ჯგუფების პოვნაში.
                 </p>
-                <div class="actions-grid mt-12">
-                    <div class="action-card fade-in slide-up delay-1">
-                        <h3>What are your dreams?</h3>
-                        <p>Find a passion. Do what you love.</p>
-                    </div>
-                    <div class="action-card fade-in slide-up delay-2">
-                        <h3>Get to a fighting gym</h3>
-                        <p>Channel your energy. Build discipline.</p>
-                    </div>
-                    <div class="action-card fade-in slide-up delay-3">
-                        <h3>Connect</h3>
-                        <p>Find a community. You are not alone.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
 
-        <section id="contact" class="contact-section min-h-screen flex-center px-4 py-20 bg-darkest">
-            <div class="max-w-xl w-full text-center fade-in slide-up">
-                <h2 class="text-4xl font-bold mb-4 font-playfair">If you need support, please reach out.</h2>
-                <p class="text-neutral-400 mb-12">Send us a message and we'll connect you with resources and community.
-                </p>
-
-                <form id="contactForm" class="contact-form text-left" onsubmit="handleFormSubmit(event)">
+                <form id="contactForm" class="contact-form text-left bg-white p-8 rounded-2xl shadow-xl"
+                    onsubmit="handleFormSubmit(event)">
                     <div class="form-group mb-6">
-                        <label for="name" class="block mb-2 text-sm font-medium text-neutral-300">Name</label>
+                        <label for="name" class="block mb-2 font-medium text-forest" data-en="What should we call you?"
+                            data-ka="როგორ მოგმართოთ?">როგორ მოგმართოთ?</label>
                         <input type="text" id="name" required
-                            class="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-red-500 transition-colors">
+                            class="w-full bg-soft-green border border-transparent rounded-xl px-4 py-3 text-forest focus:outline-none focus:border-forest transition-colors">
                     </div>
-                    <div class="form-group mb-6">
-                        <label for="message" class="block mb-2 text-sm font-medium text-neutral-300">What are you
-                            struggling with?</label>
-                        <textarea id="message" rows="4" required
-                            class="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-red-500 transition-colors"></textarea>
+                    <div class="form-group mb-8">
+                        <label for="message" class="block mb-2 font-medium text-forest" data-en="How can we help?"
+                            data-ka="რით შეგვიძლია დაგეხმაროთ?">რით შეგვიძლია დაგეხმაროთ?</label>
+                        <textarea id="message" rows="4" placeholder="I want to quit, but I don't know where to start..."
+                            required
+                            class="w-full bg-soft-green border border-transparent rounded-xl px-4 py-3 text-forest focus:outline-none focus:border-forest transition-colors"></textarea>
                     </div>
-                    <button type="submit"
-                        class="w-full bg-white text-black font-semibold rounded-lg px-4 py-4 hover:bg-neutral-200 transition-colors">
-                        Send Message
+                    <button type="submit" class="w-full btn btn-primary flex-center justify-center text-lg"
+                        onclick="gtag('event', 'submit_contact_form', {'event_category': 'conversion'});"
+                        data-en="Send Message" data-ka="გაგზავნა">
+                        გაგზავნა
                     </button>
-                    <p id="formStatus" class="mt-4 text-center text-sm hidden"></p>
+                    <p id="formStatus" class="mt-4 text-center text-sm font-medium text-forest hidden"></p>
                 </form>
             </div>
         </section>
     </main>
+
+    <footer class="bg-forest text-center py-8 text-soft-green-light text-sm border-t border-white/10">
+        <p data-en="For the youth of Sakartvelo. We believe in you."
+            data-ka="საქართველოს ახალგაზრდებისთვის. ჩვენ გვჯერა თქვენი.">საქართველოს ახალგაზრდებისთვის. ჩვენ გვჯერა
+            თქვენი.</p>
+    </footer>
 
     <script src="script.js"></script>
 </body>
