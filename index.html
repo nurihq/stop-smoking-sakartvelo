@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stop Smoking Sakartvelo | Fulfill Your Purpose</title>
+    <meta name="description"
+        content="An appeal to the youth of Sakartvelo. Stop smoking, find a passion, connect with a community, and fulfill your purpose. If you need support, please reach out.">
+
+    <!-- Open Graph for social sharing -->
+    <meta property="og:title" content="Stop Smoking Sakartvelo">
+    <meta property="og:description"
+        content="Why are our youth damaging themselves? Find a passion, connect, and fulfill your purpose.">
+    <meta property="og:type" content="website">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Background elements -->
+    <div class="glow glow-1"></div>
+    <div class="glow glow-2"></div>
+    <div class="noise-overlay"></div>
+
+    <main>
+        <section class="hero min-h-screen flex-center flex-col text-center px-4 relative">
+            <h1 class="fade-in tracking-tight">Can we please stop smoking in <span
+                    class="text-gradient">Sakartvelo</span>?</h1>
+            <div class="scroll-indicator fade-in delay-2">
+                <span>Scroll</span>
+                <div class="line"></div>
+            </div>
+        </section>
+
+        <section class="story-block min-h-screen flex-center px-4">
+            <div class="content text-center max-w-3xl fade-in slide-up">
+                <p class="quote">Why are our youth damaging themselves like this?</p>
+                <p class="mt-8 text-neutral-300">The thing that hurts the most is seeing young women smoking.</p>
+            </div>
+        </section>
+
+        <section class="story-block min-h-screen flex-center px-4 bg-darker">
+            <div class="content max-w-4xl grid-2 gap-12 fade-in">
+                <div class="text-left slide-up">
+                    <p class="quote small mb-6">"I smoked for 13 years and quit 2 years ago."</p>
+                    <p class="text-neutral-300">It was not easy, so I sympathise.</p>
+                </div>
+                <div class="text-left slide-up delay-1 border-l pl-8 border-neutral-800">
+                    <p class="text-xl text-neutral-200">But I am angry every day at how I wasted my life doing it.</p>
+                    <p class="mt-4 text-gradient font-semibold text-2xl">Please stop.</p>
+                    <p class="mt-2 text-neutral-400">Stop drinking and smoking.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="story-block min-h-screen flex-center px-4 relative">
+            <div class="glow glow-3"></div>
+            <div class="content text-center max-w-4xl fade-in slide-up">
+                <p class="text-3xl font-semibold mb-12">You are unique.<br>The world needs you to fulfil your purpose.
+                </p>
+                <div class="actions-grid mt-12">
+                    <div class="action-card fade-in slide-up delay-1">
+                        <h3>What are your dreams?</h3>
+                        <p>Find a passion. Do what you love.</p>
+                    </div>
+                    <div class="action-card fade-in slide-up delay-2">
+                        <h3>Get to a fighting gym</h3>
+                        <p>Channel your energy. Build discipline.</p>
+                    </div>
+                    <div class="action-card fade-in slide-up delay-3">
+                        <h3>Connect</h3>
+                        <p>Find a community. You are not alone.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section min-h-screen flex-center px-4 py-20 bg-darkest">
+            <div class="max-w-xl w-full text-center fade-in slide-up">
+                <h2 class="text-4xl font-bold mb-4 font-playfair">If you need support, please reach out.</h2>
+                <p class="text-neutral-400 mb-12">Send us a message and we'll connect you with resources and community.
+                </p>
+
+                <form id="contactForm" class="contact-form text-left" onsubmit="handleFormSubmit(event)">
+                    <div class="form-group mb-6">
+                        <label for="name" class="block mb-2 text-sm font-medium text-neutral-300">Name</label>
+                        <input type="text" id="name" required
+                            class="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-red-500 transition-colors">
+                    </div>
+                    <div class="form-group mb-6">
+                        <label for="message" class="block mb-2 text-sm font-medium text-neutral-300">What are you
+                            struggling with?</label>
+                        <textarea id="message" rows="4" required
+                            class="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-red-500 transition-colors"></textarea>
+                    </div>
+                    <button type="submit"
+                        class="w-full bg-white text-black font-semibold rounded-lg px-4 py-4 hover:bg-neutral-200 transition-colors">
+                        Send Message
+                    </button>
+                    <p id="formStatus" class="mt-4 text-center text-sm hidden"></p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
