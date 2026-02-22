@@ -348,12 +348,45 @@ body {
 .path-card {
     display: flex;
     flex-direction: column;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 2px solid transparent;
 }
 
-.path-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px -5px rgba(35, 77, 61, 0.1);
+.path-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: inherit;
+    background: linear-gradient(135deg, rgba(210, 124, 101, 0.1), rgba(94, 122, 109, 0.1));
+    z-index: -1;
+    transform: scale(0.95) translate(0.5rem, 0.5rem);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    opacity: 0;
+}
+
+.funky-card-hover:hover {
+    transform: translateY(-10px) rotate(-1deg);
+    border-color: var(--color-forest);
+    box-shadow: 0 20px 40px -10px rgba(35, 77, 61, 0.15);
+}
+
+.funky-card-hover:hover::before {
+    opacity: 1;
+    transform: scale(1) translate(0.75rem, 0.75rem);
+}
+
+@media (min-width: 768px) {
+    .mt-md-8 {
+        margin-top: 2rem;
+    }
+
+    .mt-md-16 {
+        margin-top: 4rem;
+    }
 }
 
 /* Buttons */
