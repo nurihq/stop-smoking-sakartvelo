@@ -7,8 +7,8 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentLang = localStorage.getItem('lang') || 'ka';
 
     function updateLanguage() {
-        // Toggle text logic: if current is Ka, button should show 'EN' to switch to English
-        langBtn.textContent = currentLang === 'ka' ? 'EN' : 'GE';
+        // Toggle text logic: if current is Ka, button should show US flag to switch to English
+        langBtn.textContent = currentLang === 'ka' ? '🇺🇸' : '🇬🇪';
 
         // Ensure the html lang attribute is correct for accessibility
         document.documentElement.lang = currentLang;
