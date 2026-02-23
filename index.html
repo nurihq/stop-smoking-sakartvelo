@@ -234,6 +234,9 @@
                     <!-- Website Identifier -->
                     <input type="hidden" name="domain" value="stopsmokingsakartvelo.com" />
 
+                    <!-- Redirection after success -->
+                    <input type="hidden" name="_redirect" value="https://stopsmokingsakartvelo.com/#success" />
+
                     <!-- Consent Checkbox -->
                     <div class="form-group mb-8" style="display: flex; align-items: flex-start; gap: 0.75rem;">
                         <input type="checkbox" name="consent" id="consent" required style="margin-top: 0.3rem;">
@@ -253,6 +256,25 @@
             </div>
         </section>
     </main>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="modal-overlay hidden">
+        <div class="modal-content funky-quote-card bg-white p-8 rounded-2xl shadow-xl text-center max-w-md mx-4 relative"
+            style="transform: rotate(0deg); max-width: 28rem;">
+            <button id="closeModal" class="text-forest hover:text-accent transition-colors text-3xl" aria-label="Close"
+                style="position: absolute; top: 1rem; right: 1.5rem; background: none; border: none; cursor: pointer; padding: 0.5rem; line-height: 1;">&times;</button>
+            <div class="text-5xl mb-4">🌟</div>
+            <h3 class="text-2xl font-bold text-forest mb-4" data-en="Thank You!" data-ka="მადლობა!">Thank You!</h3>
+            <p class="text-sage text-lg mb-6 leading-relaxed"
+                data-en="We appreciate you taking a step towards a brighter future."
+                data-ka="ჩვენ ვაფასებთ, რომ დგამთ ნაბიჯს უფრო ნათელი მომავლისკენ.">
+                We appreciate you taking a step towards a brighter future.
+            </p>
+            <button class="btn btn-primary w-full"
+                onclick="document.getElementById('successModal').classList.add('hidden')" data-en="Continue"
+                data-ka="გაგრძელება">Continue</button>
+        </div>
+    </div>
 
     <footer class="bg-forest text-center py-8 text-soft-green-light text-sm border-t border-white/10">
         <p><span data-en="Built with 🌱 by" data-ka="შექმნილია 🌱-ით">Built with 🌱 by</span> <a
