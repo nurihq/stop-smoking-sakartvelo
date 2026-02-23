@@ -69,34 +69,4 @@ function scrollToSection(id) {
     }
 }
 
-// 3. Handle Contact Form Submission via Mailto
-function handleFormSubmit(event) {
-    event.preventDefault();
 
-    const name = document.getElementById('name').value;
-    const message = document.getElementById('message').value;
-    const recipient = 'leidenfrostconsulting@gmail.com';
-    const subject = encodeURIComponent('Support Request (Stop Smoking Sakartvelo)');
-
-    const body = encodeURIComponent(`Name: ${name}\n\nMessage:\n${message}`);
-
-    // Track form submission
-    if (window.gtag) {
-        gtag('event', 'send_mailto', { 'event_category': 'conversion' });
-    }
-
-    // Open default mail client
-    window.location.href = `mailto:${recipient}?subject=${subject}&body=${body}`;
-
-    // Provide user feedback
-    const formStatus = document.getElementById('formStatus');
-    const currentLang = localStorage.getItem('lang') || 'ka';
-    formStatus.textContent = currentLang === 'en' ? 'Opening your mail client...' : 'იხსნება თქვენი ფოსტის აპლიკაცია...';
-    formStatus.classList.remove('hidden');
-
-    // Reset form after a delay
-    setTimeout(() => {
-        document.getElementById('contactForm').reset();
-        formStatus.classList.add('hidden');
-    }, 5000);
-}

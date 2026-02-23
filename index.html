@@ -209,21 +209,40 @@
                     დაგეხმაროთ რესურსების, დარბაზების ან მხარდამჭერი ჯგუფების პოვნაში.
                 </p>
 
-                <form id="contactForm" class="contact-form text-left bg-white p-8 rounded-2xl shadow-xl"
-                    onsubmit="handleFormSubmit(event)">
+                <form action="https://5osdsd7re7htcmddembdmucjv40ikqlo.lambda-url.us-east-1.on.aws/" method="POST"
+                    id="contactForm" class="contact-form text-left bg-white p-8 rounded-2xl shadow-xl">
                     <div class="form-group mb-6">
                         <label for="name" class="block mb-2 font-medium text-forest" data-en="What should we call you?"
                             data-ka="როგორ მოგმართოთ?">როგორ მოგმართოთ?</label>
-                        <input type="text" id="name" required
+                        <input type="text" name="name" id="name" required
                             class="w-full bg-soft-green border border-transparent rounded-xl px-4 py-3 text-forest focus:outline-none focus:border-forest transition-colors">
                     </div>
-                    <div class="form-group mb-8">
+                    <div class="form-group mb-6">
+                        <label for="email" class="block mb-2 font-medium text-forest" data-en="Email Address"
+                            data-ka="ელექტრონული ფოსტა">ელექტრონული ფოსტა</label>
+                        <input type="email" name="email" id="email" required
+                            class="w-full bg-soft-green border border-transparent rounded-xl px-4 py-3 text-forest focus:outline-none focus:border-forest transition-colors">
+                    </div>
+                    <div class="form-group mb-6">
                         <label for="message" class="block mb-2 font-medium text-forest" data-en="How can we help?"
                             data-ka="რით შეგვიძლია დაგეხმაროთ?">რით შეგვიძლია დაგეხმაროთ?</label>
-                        <textarea id="message" rows="4" placeholder="I want to quit, but I don't know where to start..."
-                            required
+                        <textarea name="message" id="message" rows="4"
+                            placeholder="I want to quit, but I don't know where to start..." required
                             class="w-full bg-soft-green border border-transparent rounded-xl px-4 py-3 text-forest focus:outline-none focus:border-forest transition-colors"></textarea>
                     </div>
+
+                    <!-- Website Identifier -->
+                    <input type="hidden" name="domain" value="stopsmokingsakartvelo.com" />
+
+                    <!-- Consent Checkbox -->
+                    <div class="form-group mb-8" style="display: flex; align-items: flex-start; gap: 0.75rem;">
+                        <input type="checkbox" name="consent" id="consent" required style="margin-top: 0.3rem;">
+                        <label for="consent" class="text-sm font-medium text-forest" style="line-height: 1.4;"
+                            data-en="I consent to being mailed periodic updates to help me quit smoking."
+                            data-ka="თანახმა ვარ მივიღო პერიოდული სიახლეები, რომლებიც დამეხმარება მოწევისთვის თავის დანებებაში.">თანახმა
+                            ვარ მივიღო პერიოდული სიახლეები, რომლებიც დამეხმარება მოწევისთვის თავის დანებებაში.</label>
+                    </div>
+
                     <button type="submit" class="w-full btn btn-primary flex-center justify-center text-lg"
                         onclick="gtag('event', 'submit_contact_form', {'event_category': 'conversion'});"
                         data-en="Send Message" data-ka="გაგზავნა">
